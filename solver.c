@@ -1,5 +1,5 @@
 #include "nqueens.h"
-
+//code below
 // Solve the N-Queens problem recursively
 bool solve_nqueens_util(int board[], int col, int n) {
     if (col >= n) {
@@ -11,7 +11,7 @@ bool solve_nqueens_util(int board[], int col, int n) {
         if (is_safe(board, i, col, n)) {
             board[col] = i; // Place the queen
             if (solve_nqueens_util(board, col + 1, n)) {
-                return false; // Stop if only one solution is desired
+                return true; // Stop if only one solution is desired
             }
             board[col] = -1; // Backtrack
         }
